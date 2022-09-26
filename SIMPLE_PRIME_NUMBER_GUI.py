@@ -15,9 +15,11 @@ def cal_sum():
        global n_Prime
        
        t1=int(a.get())
-       myButton['state'] = DISABLED       
+       myButton['state'] = DISABLED
 
-       if t1 > 1:
+       
+       
+       if t1 > 1 and t1<=1000:
            for i in range(2, int(t1/2)+1):
                if t1 % i == 0:
                    n_Prime=Label(win, text="not a prime number")
@@ -25,7 +27,11 @@ def cal_sum():
                    break
            else:
                 n_Prime=Label(win, text="is a Prime Number")
-                n_Prime.pack()    
+                n_Prime.pack()
+                
+       else :
+              n_Prime=Label(win, text="Please put betweet 1-1000")
+              n_Prime.pack()
 
 
 def myDel(): 
